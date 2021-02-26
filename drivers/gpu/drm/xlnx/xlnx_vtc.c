@@ -322,6 +322,13 @@ static int xlnx_vtc_set_timing(struct xlnx_bridge *bridge,
 
 	reg = xlnx_vtc_readl(vtc->base, XVTC_CTL);
 	xlnx_vtc_writel(vtc->base, XVTC_CTL, reg | XVTC_CTL_RU);
+
+	dev_dbg(vtc->dev, "Try to set pixel clock to %ld kHZ\n", vm->pixelclock/1000);
+	if (clk_set_rate(vtc->vid_clk, vm->pixelclock)) {
+		dev_err(vtc->dev, "Failed to set pixel clock\n");
+		return -1;
+	}
+
 	dev_dbg(vtc->dev, "set timing done\n");
 
 	return 0;

@@ -16,6 +16,8 @@ obj-$(CONFIG_DRM_XLNX_MIXER) += xlnx_mixer.o
 
 obj-$(CONFIG_DRM_XLNX_PL_DISP) += xlnx_pl_disp.o
 
+obj-$(CONFIG_DRM_PL_HDMI_CONNECTOR) += pl_hdmi.o
+
 xlnx-sdi-objs += xlnx_sdi.o xlnx_sdi_timing.o
 obj-$(CONFIG_DRM_XLNX_SDI) += xlnx-sdi.o
 

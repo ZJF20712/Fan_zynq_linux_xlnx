@@ -352,6 +352,14 @@ config COMMON_CLK_XLNX_CLKWZRD_V
 	  Adds support for Versal clocking wizard 1.0 and compatible.
 	  This driver supports the Xilinx clocking wizard programmable clock
 	  synthesizer. The number of output is configurable in the design.
+	  
+config COMMON_CLK_DGLNT_DYNCLK
+	tristate "Digilent axi_dynclk Driver"
+	depends on ARCH_ZYNQ || MICROBLAZE
+	help
+	---help---
+	  Support for the Digilent AXI Dynamic Clock core for Xilinx
+	  FPGAs.
 
 source "drivers/clk/actions/Kconfig"
 source "drivers/clk/analogbits/Kconfig"

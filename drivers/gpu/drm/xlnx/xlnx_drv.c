@@ -45,7 +45,7 @@
 #define DRIVER_MAJOR	1
 #define DRIVER_MINOR	0
 
-static uint xlnx_fbdev_vres = 2;
+static uint xlnx_fbdev_vres = 1;
 module_param_named(fbdev_vres, xlnx_fbdev_vres, uint, 0444);
 MODULE_PARM_DESC(fbdev_vres,
 		 "fbdev virtual resolution multiplier for fb (default: 2)");

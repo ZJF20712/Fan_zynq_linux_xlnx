@@ -69,6 +69,7 @@ obj-$(CONFIG_COMMON_CLK_WM831X)		+= clk-wm831x.o
 obj-$(CONFIG_COMMON_CLK_XGENE)		+= clk-xgene.o
 obj-$(CONFIG_COMMON_CLK_XLNX_CLKWZRD)	+= clk-xlnx-clock-wizard.o
 obj-$(CONFIG_COMMON_CLK_XLNX_CLKWZRD_V)	+= clk-xlnx-clock-wizard-v.o
+obj-$(CONFIG_COMMON_CLK_DGLNT_DYNCLK)	+= clk-dglnt-dynclk.o
 
 # please keep this section sorted lexicographically by directory path name
 obj-y					+= actions/
